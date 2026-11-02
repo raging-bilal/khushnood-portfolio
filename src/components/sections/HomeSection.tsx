@@ -10,13 +10,14 @@ export function HomeSection() {
   return (
     <section id="home" aria-labelledby="home-title" className="relative overflow-hidden py-20 sm:py-28 lg:py-32">
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 size-[28rem] rounded-full bg-accent-soft/50 blur-3xl" />
-      <PageContainer className="relative grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <PageContainer className="relative grid min-w-0 grid-cols-1 items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <motion.div
+          className="min-w-0"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-3.5 py-2 text-xs font-medium tracking-wide text-muted">
+          <div className="mb-7 inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full border border-line bg-surface/80 px-3.5 py-2 text-xs font-medium tracking-wide text-muted">
             <span className="size-1.5 rounded-full bg-accent" />
             {profile.role} · {profile.institution}
           </div>
@@ -51,7 +52,7 @@ export function HomeSection() {
           initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: shouldReduceMotion ? 0 : 0.08, ease: 'easeOut' }}
-          className="mx-auto w-full max-w-md lg:max-w-none"
+          className="mx-auto w-full min-w-0 max-w-md lg:max-w-none"
         >
           <ResearchVisual />
         </motion.div>

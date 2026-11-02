@@ -48,12 +48,16 @@
     min-width: 320px;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow-x: clip;
     background: var(--paper);
   }
 
   body {
     min-width: 320px;
     min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
     margin: 0;
     background: var(--paper);
     color: var(--ink);
@@ -95,4 +99,10 @@
       transition-duration: 0.01ms !important;
     }
   }
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }

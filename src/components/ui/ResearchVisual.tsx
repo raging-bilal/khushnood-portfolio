@@ -2,7 +2,7 @@ export function ResearchVisual() {
   return (
     <div
       aria-hidden="true"
-      className="relative mx-auto flex aspect-square w-full max-w-[25rem] items-center justify-center rounded-[2rem] border border-line bg-surface p-8 shadow-[0_30px_90px_-60px_rgba(31,75,71,0.45)]"
+      className="relative mx-auto flex aspect-square w-[calc(100vw-2.5rem)] items-center justify-center rounded-[2rem] border border-line bg-surface p-8 shadow-[0_30px_90px_-60px_rgba(31,75,71,0.45)] sm:w-full sm:max-w-[25rem]"
     >
       <div className="absolute inset-5 rounded-[1.5rem] border border-dashed border-line" />
       <svg viewBox="0 0 320 320" className="relative h-full w-full max-w-[19rem]">

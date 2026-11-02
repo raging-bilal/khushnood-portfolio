@@ -6,8 +6,12 @@ import { PageContainer } from './PageContainer'
 const navigation = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#interests', label: 'Research interests' },
-  { href: '#research', label: 'Research focus' },
+  { href: '#interests', label: 'Interests' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#publications', label: 'Publications' },
+  { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#journey', label: 'Journey' },
 ]
 
 export function SiteHeader() {
@@ -39,12 +43,12 @@ export function SiteHeader() {
           Khushnood Bilal<span className="text-accent">.</span>
         </a>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-3 lg:flex xl:gap-4">
           {navigation.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted no-underline transition-colors hover:text-accent"
+              className="whitespace-nowrap text-xs text-muted no-underline transition-colors hover:text-accent xl:text-sm"
             >
               {item.label}
             </a>
@@ -55,7 +59,7 @@ export function SiteHeader() {
           <ThemeToggle />
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-full border border-line bg-surface text-ink transition-colors hover:bg-accent-soft md:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-full border border-line bg-surface text-ink transition-colors hover:bg-accent-soft lg:hidden"
             aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
@@ -65,11 +69,11 @@ export function SiteHeader() {
           </button>
         </div>
 
-        {menuOpen && (
-          <nav
+        <nav
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            className="absolute inset-x-5 top-[calc(100%+0.5rem)] flex flex-col gap-1 rounded-2xl border border-line bg-surface p-3 shadow-xl shadow-ink/5 md:hidden"
+            hidden={!menuOpen}
+            className={`absolute inset-x-5 top-[calc(100%+0.5rem)] flex-col gap-1 rounded-2xl border border-line bg-surface p-3 shadow-xl shadow-ink/5 lg:hidden ${menuOpen ? 'flex' : 'hidden'}`}
           >
             {navigation.map((item) => (
               <a
@@ -82,7 +86,6 @@ export function SiteHeader() {
               </a>
             ))}
           </nav>
-        )}
       </PageContainer>
     </header>
   )

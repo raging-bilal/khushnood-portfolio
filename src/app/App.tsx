@@ -2,6 +2,11 @@ import { AboutSection } from '../components/sections/AboutSection'
 import { HomeSection } from '../components/sections/HomeSection'
 import { InterestsSection } from '../components/sections/InterestsSection'
 import { ResearchSection } from '../components/sections/ResearchSection'
+import { ProjectsSection } from '../components/sections/ProjectsSection'
+import { PublicationsSection } from '../components/sections/PublicationsSection'
+import { EducationSection } from '../components/sections/EducationSection'
+import { SkillsSection } from '../components/sections/SkillsSection'
+import { ResearchJourneySection } from '../components/sections/ResearchJourneySection'
 import { SiteFooter } from '../components/layout/SiteFooter'
 import { SiteHeader } from '../components/layout/SiteHeader'
 
@@ -20,6 +25,11 @@ export default function App() {
         <AboutSection />
         <InterestsSection />
         <ResearchSection />
+        <ProjectsSection />
+        <PublicationsSection />
+        <EducationSection />
+        <SkillsSection />
+        <ResearchJourneySection />
       </main>
       <SiteFooter />
     </div>
