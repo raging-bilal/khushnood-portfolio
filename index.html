@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>khushnood-portfolio</title>
+    <meta name="theme-color" content="#faf9f6" />
+    <meta name="description" content="Khushnood Bilal is a PhD Research Scholar in Computer Science at Aligarh Muslim University. His research focuses on federated language model systems, privacy-preserving AI and multilingual NLP." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Khushnood Bilal — PhD Research Scholar in Computer Science" />
+    <meta property="og:description" content="Academic and research portfolio of Khushnood Bilal, PhD Research Scholar at Aligarh Muslim University." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Khushnood Bilal — Academic & Research Portfolio" />
+    <meta name="twitter:description" content="Research in federated language model systems, privacy-preserving AI and multilingual NLP." />
+    <script>
+      (() => {
+        let theme;
+        try {
+          const saved = localStorage.getItem('khushnood-portfolio-theme');
+          theme = saved === 'light' || saved === 'dark'
+            ? saved
+            : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } catch {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        const root = document.documentElement;
+        root.classList.toggle('dark', theme === 'dark');
+        root.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#171d1e' : '#faf9f6');
+      })();
+    </script>
+    <title>Khushnood Bilal — Academic &amp; Research Portfolio</title>
   </head>
   <body>
     <div id="root"></div>

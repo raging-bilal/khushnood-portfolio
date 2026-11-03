@@ -11,6 +11,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={`Switch to ${nextTheme} mode`}
+      aria-pressed={theme === 'dark'}
       title={`Switch to ${nextTheme} mode`}
       className="inline-flex size-10 items-center justify-center rounded-full border border-line bg-surface text-ink transition-colors hover:bg-accent-soft"
     >
